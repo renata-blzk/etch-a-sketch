@@ -7,7 +7,7 @@ function createDivs() {
         //element.onmouseover = changeColor;
         container.appendChild(element);
 
-        let chngColor = document.querySelectorAll('.div');
+        let chngColor = document.querySelectorAll(':scope > .div');
 
         chngColor.forEach(function(div) {
             div.addEventListener('mouseover', function hover() {
