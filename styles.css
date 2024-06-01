@@ -1,20 +1,29 @@
+body {
+    text-align: center;
+}
+
 h1 {
     color: red
 }
 
 .container {
-    width: 330px;
-    height: 330px;
-    background-color: green;
+    margin: auto;
+    width: 530px;
+    height: 530px;
+    background-color: darkgray;
     display: flex;
     flex-wrap: wrap;
 }
 
 .div {
-    width: 10px;
-    height: 10px;
-    background-color: orange;
-    margin: 5px;
+    width: 29px;
+    height: 29px;
+    background-color: white;
+    margin: 2px;
     flex: 1 0 1;
     /*align-items: center;*/
+}
+
+.div:hover {
+    background-color: green;
 }
