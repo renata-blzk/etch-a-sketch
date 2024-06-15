@@ -1,4 +1,5 @@
-let container = document.querySelector('.container');
+const container = document.querySelector('.container');
+const button = document.querySelector('button');
 
 function createDivs() {
     for (let i=0; i<256; i++) {
@@ -16,3 +17,8 @@ function createDivs() {
 
 
 createDivs(256); 
+
+button.addEventListener('click', function() {
+   const userInput = prompt ('Enter a number:');
+   return userInput;
+ });
