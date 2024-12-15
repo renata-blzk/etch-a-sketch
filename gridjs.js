@@ -19,10 +19,10 @@ if (squaresPerSide > 0 && squaresPerSide < 100)*/
     
 
 function createGridCells() {
-    const numbOfSquares = (squaresPerSide * squaresPerSide);
+    const numOfSquares = (squaresPerSide * squaresPerSide);
     const widthOrHeight = `${(GRIDSIDE / squaresPerSide) -2}px`;
 
-    for (let i = 0; i < squaresPerSide; i++) {
+    for (let i = 0; i < numOfSquares; i++) {
         const gridCell = document.createElement("div");
 
         gridCell.style.width = gridCell.style.height = widthOrHeight;
@@ -31,7 +31,7 @@ function createGridCells() {
         sketchArea.appendChild(gridCell);
 
         gridCell.addEventListener('mouseover', setBackgroundColor);
-    };
+    }
 }
 
 createGridCells();
