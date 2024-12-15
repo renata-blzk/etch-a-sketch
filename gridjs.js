@@ -4,19 +4,22 @@ let squaresPerSide = 16;
 const sketchArea = document.querySelector("#sketch-area");
 sketchArea.style.width = sketchArea.style.height = `${GRIDSIDE}px`;
 
-/*const button = document.querySelector('button');*/
+const button = document.querySelector('button');
 
 function setBackgroundColor() {
     this.style.backgroundColor = "black";
 }   
 
-/*button.addEventListener('click', function() {
-    let squaresPerSide = prompt ('Enter a number:');
-    alert (squaresPerSide);
-});
+button.addEventListener('click', function() {
+    let numberA = prompt ('Enter a number:');
     
-if (squaresPerSide > 0 && squaresPerSide < 100)*/
-    
+    if (numberA > 0 && numberA < 100) {
+        alert (numberA);
+    } else {
+        alert ('Please enter a number between 2 and 100');
+    }
+});    
+
 
 function createGridCells() {
     const numOfSquares = (squaresPerSide * squaresPerSide);
