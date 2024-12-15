@@ -4,9 +4,19 @@ let squaresPerSide = 16;
 const sketchArea = document.querySelector("#sketch-area");
 sketchArea.style.width = sketchArea.style.height = `${GRIDSIDE}px`;
 
+/*const button = document.querySelector('button');*/
+
 function setBackgroundColor() {
     this.style.backgroundColor = "black";
-}
+}   
+
+/*button.addEventListener('click', function() {
+    let squaresPerSide = prompt ('Enter a number:');
+    alert (squaresPerSide);
+});
+    
+if (squaresPerSide > 0 && squaresPerSide < 100)*/
+    
 
 function createGridCells() {
     const numbOfSquares = (squaresPerSide * squaresPerSide);
@@ -15,16 +25,18 @@ function createGridCells() {
     for (let i = 0; i < squaresPerSide; i++) {
         const gridCell = document.createElement("div");
 
-        gridCell.style.width = gridCell.style.height = widthOrHeigth;
+        gridCell.style.width = gridCell.style.height = widthOrHeight;
         gridCell.classList.add("cell");
 
         sketchArea.appendChild(gridCell);
 
         gridCell.addEventListener('mouseover', setBackgroundColor);
-    }
-};
+    };
+}
 
 createGridCells();
+
+
 
 
 
