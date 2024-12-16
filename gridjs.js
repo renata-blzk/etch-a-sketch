@@ -1,27 +1,16 @@
 const GRIDSIDE = 400;
-let squaresPerSide = 16;
+let squaresPerSide;
 
 const sketchArea = document.querySelector("#sketch-area");
 sketchArea.style.width = sketchArea.style.height = `${GRIDSIDE}px`;
 
-const button = document.querySelector('button');
+const enterbtn = document.querySelector('.enterbtn');
 
 function setBackgroundColor() {
     this.style.backgroundColor = "black";
 }   
 
-button.addEventListener('click', function() {
-    let numberA = prompt ('Enter a number:');
-    
-    if (numberA > 0 && numberA < 100) {
-        alert (numberA);
-    } else {
-        alert ('Please enter a number between 2 and 100');
-    }
-});    
-
-
-function createGridCells() {
+function createGridCells(squaresPerSide) {
     const numOfSquares = (squaresPerSide * squaresPerSide);
     const widthOrHeight = `${(GRIDSIDE / squaresPerSide) -2}px`;
 
@@ -37,7 +26,16 @@ function createGridCells() {
     }
 }
 
-createGridCells();
+createGridCells(squaresPerSide);
+
+enterbtn.addEventListener('click', function() {
+    let input = prompt ('Enter a number:');
+    
+    if (input < 2 || input > 100) {
+        alert ('Please enter a number between 2 and 100');
+    }
+    createGridCells(input);
+});    
 
 
 
