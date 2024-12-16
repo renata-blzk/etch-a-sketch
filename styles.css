@@ -11,6 +11,7 @@ button {
     border-radius: 20px;
     display: flex;
     margin: 20px auto;
+    justify-content: center;
 }
 
 button:hover {

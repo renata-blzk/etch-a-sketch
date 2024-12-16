@@ -11,6 +11,7 @@ function setBackgroundColor() {
 }   
 
 function createGridCells(squaresPerSide) {
+    sketchArea.replaceChildren();
     const numOfSquares = (squaresPerSide * squaresPerSide);
     const widthOrHeight = `${(GRIDSIDE / squaresPerSide) -2}px`;
 
