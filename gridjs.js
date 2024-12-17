@@ -31,6 +31,20 @@ function createGridCells(squaresPerSide) {
         gridCell.addEventListener('mouseenter', () => {
             gridCell.style.backgroundColor = setBackgroundColor();
         });
+
+        document.querySelectorAll('.cell').forEach(gridCell => {
+            let currentOpacity = 0.2;
+
+            gridCell.addEventListener('mouseenter', () => {
+                if (currentOpacity < 1.0) {
+                    currentOpacity += 0.1;
+                    if (currentOpacity > 1.0) {
+                        currentOpacity = 1.0;
+                    }
+                    gridCell.style.opacity = currentOpacity;
+                }
+            });
+        });
     }
 }
 
